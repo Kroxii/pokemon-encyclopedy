@@ -1,14 +1,12 @@
-/* ==========================
-   Root Variables
-========================== */
 :root {
-    --color-primary: #000000;
+    --color-primary: #222224;
     --color-secondary: #6c757d;
-    --color-red: #dc3545;
+    --color-red: #ee1515;
     --color-gen1: #e6cc67;
     --color-gen2: #e38beb;
     --color-gen4: #9fe7cb;
     --color-gen6: #ffb3b3;
+    --color-bonus: #b0e1e4;
     --color-light: #ffffff;
     --color-dark: #343a40;
 }
@@ -30,12 +28,13 @@ body {
     padding: 0;
 }
 
-h2 {
+h2, h3 {
     font-family: 'Pokemon Solid', sans-serif;
     margin: 0;
     padding: 5px;
     border-bottom: 2px solid var(--color-primary);
     border-radius: 50%;
+    letter-spacing: 2px;
 }
 
 .navbar {
@@ -162,9 +161,12 @@ section h2 {
     text-align: center;
     box-shadow: 0 4px 6px var(--color-primary);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
 
 .pokemon-card:hover {
+    z-index: 10;
     transform: scale(1.2);
     box-shadow: 0 8px 12px var(--color-primary);
 }
@@ -204,6 +206,11 @@ section h2 {
 #gen6 {
     background-color: var(--color-gen6);
 }
+
+#bonus {
+    background-color: var(--color-bonus);
+}
+
 
 @media (max-width: 768px) {
     .navbar {
