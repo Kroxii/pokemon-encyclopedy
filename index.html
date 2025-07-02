@@ -12,101 +12,50 @@
         <link rel="manifest" href="favicon/site.webmanifest" />
     </head>
     <body>
-        <header class="header">
-            <h1>Encyclopédie Pokémon</h1>
-            <p>Découvrez les évolutions d'Evoli par génération !</p>
-            <img id="pokeball" src="images/Pokeball.png" alt="Pokeball" width="200" height="200">
+        <header class="main-header">
+            <h2>Bienvenue sur l'Encyclopédie Pokémon</h2>
+            <button id="theme-toggle">Mode Nuit</button>
         </header>
-        <nav class="navbar">
-            <a href="#gen1">Génération 1</a>
-            <a href="#gen2">Génération 2</a>
-            <a href="#gen4">Génération 4</a>
-            <a href="#gen6">Génération 6</a>
-            <a href="#bonus">Bonus</a>
-        </nav>
-        <div class="generations-container">
-            <input type="text" id="search-bar" placeholder="Rechercher un Pokémon..." style="margin: 20px auto; display: block; padding: 10px; width: 80%; border: 1px solid var(--color-secondary); border-radius: 5px;">
-
-            <section id="gen1">
-                <h2>Génération 1</h2>
-                <div class="pokemon-card">
-                    <h3>Aquali</h3>
-                    <img src="images/Aquali.png" alt="Aquali" width="200" height="200">
-                    <p><strong>Numéro de Pokédex :</strong> 134</p>
-                    <p><strong>Type :</strong> <img src="images/Miniature_Type_Eau_EV.png" alt="Type Eau"></p>
-                    <p><strong>Évolution :</strong> Pierre Eau</p>
+        <div class="pokedex">
+            <div class="pokedex-header">
+                <div class="pokedex-lights">
+                    <span class="light red"></span>
+                    <span class="light yellow"></span>
+                    <span class="light green"></span>
                 </div>
-                <div class="pokemon-card">
-                    <h3>Voltali</h3>
-                    <img src="images/Voltali.png" alt="Voltali" width="200" height="200">
-                    <p><strong>Numéro de Pokédex :</strong> 135</p>
-                    <p><strong>Type :</strong> <img src="images/Miniature_Type_Électrik_EV.png" alt="Type Électrique"></p>
-                    <p><strong>Évolution :</strong> Pierre Foudre</p>
+                <h1>Pokédex</h1>
+            </div>
+            <div class="pokedex-screen">
+                <form role="search" id="search-form">
+                    <label for="search-input">Nom ou ID Pokémon :</label>
+                    <input type="text" name="creature" id="search-input" required autocomplete="off" />
+                    <button type="submit" id="search-button">🔍</button>
+                    <button type="button" id="reset-button">↺</button>
+                </form>
+                <div class="pokedex-info">
+                    <div class="pokedex-image">
+                        <img id="pokemon-img" src="" alt="Pokemon Image" />
+                    </div>
+                    <div class="pokedex-details">
+                        <span><strong>Nom :</strong> <span id="pokemon-name"></span></span>
+                        <span><strong>ID :</strong> <span id="pokemon-id"></span></span>
+                        <span><strong>Type :</strong> <span id="pokemon-type"></span></span>
+                        <span><strong>PV :</strong> <span id="pokemon-hp"></span></span>
+                        <span><strong>Attaque :</strong> <span id="pokemon-attack"></span></span>
+                        <span><strong>Défense :</strong> <span id="pokemon-defense"></span></span>
+                        <span><strong>Attaque Spé. :</strong> <span id="pokemon-special-attack"></span></span>
+                        <span><strong>Défense Spé. :</strong> <span id="pokemon-special-defense"></span></span>
+                        <span><strong>Vitesse :</strong> <span id="pokemon-speed"></span></span>
+                        <span><strong>Résistances :</strong> <span id="pokemon-resistances"></span></span>
+                        <span><strong>Faiblesses :</strong> <span id="pokemon-weaknesses"></span></span>
+                        <span><strong>Évolution :</strong> <span id="pokemon-evolution"></span></span>
+                    </div>
                 </div>
-                <div class="pokemon-card">
-                    <h3>Pyroli</h3>
-                    <img src="images/Pyroli.png" alt="Pyroli" width="200" height="200">
-                    <p><strong>Numéro de Pokédex :</strong> 136</p>
-                    <p><strong>Type :</strong> <img src="images/Miniature_Type_Feu_EV.png" alt="Type Feu"></p>
-                    <p><strong>Évolution :</strong> Pierre Feu</p>
-                </div>
-            </section>
-            <section id="gen2">
-                <h2>Génération 2</h2>
-                <div class="pokemon-card">
-                    <h3>Mentali</h3>
-                    <img src="images/Mentali.png" alt="Mentali" width="200" height="200">
-                    <p><strong>Numéro de Pokédex :</strong> 196</p>
-                    <p><strong>Type :</strong> <img src="images/Miniature_Type_Psy_EV.png" alt="Type Psy"></p>
-                    <p><strong>Évolution :</strong> Amitié (Jour)</p>
-                </div>
-                <div class="pokemon-card">
-                    <h3>Noctali</h3>
-                    <img src="images/Noctali.png" alt="Noctali" width="200" height="200">
-                    <p><strong>Numéro de Pokédex :</strong> 197</p>
-                    <p><strong>Type :</strong> <img src="images/Miniature_Type_Ténèbres_EV.png" alt="Type Ténèbres"></p>
-                    <p><strong>Évolution :</strong> Amitié (Nuit)</p>
-                </div>
-            </section>
-            <section id="gen4">
-                <h2>Génération 4</h2>
-                <div class="pokemon-card">
-                    <h3>Phyllali</h3>
-                    <img src="images/Phyllali.png" alt="Phyllali" width="200" height="200">
-                    <p><strong>Numéro de Pokédex :</strong> 470</p>
-                    <p><strong>Type :</strong> <img src="images/Miniature_Type_Plante_EV.png" alt="Type Plante"></p>
-                    <p><strong>Évolution :</strong> Pierre Plante</p>
-                </div>
-                <div class="pokemon-card">
-                    <h3>Givrali</h3>
-                    <img src="images/Givrali.png" alt="Givrali" width="200" height="200">
-                    <p><strong>Numéro de Pokédex :</strong> 471</p>
-                    <p><strong>Type :</strong> <img src="images/Miniature_Type_Glace_EV.png" alt="Type Glace"></p>
-                    <p><strong>Évolution :</strong> Pierre Glace</p>
-                </div>
-            </section>
-            <section id="gen6">
-                <h2>Génération 6</h2>
-                <div class="pokemon-card">
-                    <h3>Nymphali</h3>
-                    <img src="images/Nymphali.png" alt="Nymphali" width="200" height="200">
-                    <p><strong>Numéro de Pokédex :</strong> 700</p>
-                    <p><strong>Type :</strong> <img src="images/Miniature_Type_Fée_EV.png" alt="Type Fée"></p>
-                    <p><strong>Évolution :</strong> Amitié (Jour)</p>
-                </div>
-            </section>
-            <section id="bonus">
-                <h2>Bonus</h2>
-                <div class="pokemon-card">
-                    <h3>Lugia</h3>
-                    <img src="images/Lugia.png" alt="Lugia" width="200" height="200">
-                    <p><strong>Numéro de Pokédex :</strong> 249</p>
-                    <p><strong>Type :</strong> <img src="images/Miniature_Type_Psy_EV.png" alt="Type Psy"> <img src="Miniature_Type_Vol_EV.png" alt="Type Vol"></p>
-                    <p><strong>Évolution :</strong> Aucun</p>
-                </div>
+            </div>
         </div>
+        <footer>
+            <p>Remi Leon - Avril 2025</p>
+        </footer>
+        <script src="script.js"></script>
     </body>
-    <footer>
-        <p>Remi Leon - Avril 2025</p>
-    </footer>
 </html>
