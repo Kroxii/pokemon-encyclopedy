@@ -172,8 +172,7 @@ body {
 .pokedex-details span:nth-child(12) strong { color: #6d4c41; }
 
 footer {
-    display: flex;
-    margin-top: 20px;
+  margin-top: 20px;
   text-align: center;
   color: #555;
   font-size: 0.9rem;
